@@ -1,0 +1,50 @@
+Section 2: Building a walking Skeleton Part One - API
+
+Implement the basic API functionality and have an introductory understanding of:
+
+1. Using the dotnet CLI
+2. API controllers and Endpoints
+3. Entity Framework
+4. The API Project structure
+5. Configuration and Environment variables
+6. Source control
+
+Section 3: Building a walking skeleton Part Two - ANGULAR
+
+Complete the walking skeleton and have an introductory understanding of:
+
+1. Using the Angular CLI
+2. How to create a new Angular app
+3. The Angular project files
+4. The Angular bootstrap
+5. Using the Angular HTTP Client Service
+6. Running an Angular app over HTTPS
+7. How to add packages using NPM
+
+
+Section 4: Authentication basics
+
+Implement basic authentication in our app and have an understanding of:
+
+1. How to store passwords in the Database
+2. Using inheritance in C# - DRY
+3. Using the C# debugger
+4. Using Data Transfer Objects (DTOs)
+5. Validation
+6. JSON Web Tokens (JWTs)
+7. Using services in C#
+8. Middleware
+9. Extension methods - DRY
+
+
+Section 5: CREATE LOGIN AND REGISTER
+
+Implement the login and register functionality into the app as well as understanding:
+
+1. Creating components using the Angular CLI
+2. Using Angular Template forms
+3. Using Angular services
+4. Understanding Observables
+5. Using Angular structural directives to conditionally display elements on a page
+6. Component communication from parent to child
+7. Component communication from child to parent
