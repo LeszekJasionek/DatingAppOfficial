@@ -1,3 +1,11 @@
+Needed dependencies : 
+
+
+npm install ngx-toastr --save ( github.com/scttcper/ngx-toastr)
+npm install @angular/animations
+
+
+
 Section 2: Building a walking Skeleton Part One - API
 
 Implement the basic API functionality and have an introductory understanding of:
