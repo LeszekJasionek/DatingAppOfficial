@@ -3,6 +3,7 @@ Needed dependencies :
 
 npm install ngx-toastr --save ( github.com/scttcper/ngx-toastr)
 npm install @angular/animations
+npm install bootswatch
 
 
 
