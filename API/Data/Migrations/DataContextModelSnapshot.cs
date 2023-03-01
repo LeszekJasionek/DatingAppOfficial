@@ -76,11 +76,11 @@ namespace API.Data.Migrations
                     b.Property<int>("AppUserId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("IsMain")
-                        .HasColumnType("TEXT");
+                    b.Property<bool>("IsMain")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("PublicedId")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("PublicedId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Url")
                         .HasColumnType("TEXT");

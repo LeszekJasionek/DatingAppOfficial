@@ -35,9 +35,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
-
-
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -55,7 +52,7 @@ try
 catch(Exception ex)
 {
     var logger = services.GetService<ILogger<Program>>();
-    logger.LogError(ex, "An error occured during migration")
+    logger.LogError(ex, "An error occured during migration");
 }
 
 app.Run();
