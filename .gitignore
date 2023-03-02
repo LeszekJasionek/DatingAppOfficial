@@ -365,3 +365,5 @@ FodyWeavers.xsd
 # Windows shortcuts
 *.lnk
 API/appsettings.json
+
+**/appsettings.json

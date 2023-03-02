@@ -1,5 +1,8 @@
 Needed dependencies : 
 
+EXTENSIONS : 
+
+CloudinaryDotNet by Cloudinary
 
 npm install ngx-toastr --save ( github.com/scttcper/ngx-toastr)
 npm install @angular/animations
