@@ -9,6 +9,7 @@ npm install @angular/animations
 npm install bootswatch
 npm install @kolkov/ngx-gallery --legacy-peer-deps
 npm install ngx-spinner --save   /  ng add ngx-spinner
+npm install ng2-file-upload@next --legacy-peer-deps
 
 
 
