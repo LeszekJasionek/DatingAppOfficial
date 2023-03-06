@@ -1,16 +1,13 @@
-using System.Security.Claims;
-using API.Data;
+using System.Net;
 using API.DTOs;
 using API.Entities;
 using API.Extensions;
+using API.Helpers;
 using API.Interfaces;
 using AutoMapper;
-using AutoMapper.Configuration.Annotations;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+
 
 namespace API.Controllers
 {
@@ -29,10 +26,14 @@ namespace API.Controllers
             _userRepository = userRepository;        
         }
 
-        [HttpGet(Name = "GetUsers")]
-        public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers()
+        [HttpGet]
+        public async Task<ActionResult<PagedList<MemberDto>>> GetUsers([FromQuery] UserParams userParams)
         {
-            var users = await _userRepository.GetMembersAsync();
+            var users = await _userRepository.GetMembersAsync(userParams);
+
+             Response.AddPaginationHeader(new PaginationHeader(users.CurrentPage, users.PageSize,
+             users.TotalCount, users.TotalPages));
+
             return Ok(users);
 
         }
