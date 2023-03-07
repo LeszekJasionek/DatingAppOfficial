@@ -55,7 +55,7 @@ namespace API.Controllers
         {
             var user = await _context.Users
             .Include(p => p.Photos)
-            .SingleOrDefaultAsync(x => x.UserName == loginDto.Username);
+            .SingleOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
             if(user == null) return Unauthorized("Invalid username");
 
             using var hmac = new HMACSHA512(user.PasswordSalt);
