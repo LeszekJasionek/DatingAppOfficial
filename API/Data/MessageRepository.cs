@@ -42,7 +42,7 @@ namespace API.Data
             query = messageParams.Container switch
             {
                 "Inbox" => query.Where(u => u.RecipientUsername == messageParams.Username),
-                "outbox" => query.Where(u => u.SenderUsername == messageParams.Username),
+                "Outbox" => query.Where(u => u.SenderUsername == messageParams.Username),
                 _ => query.Where(u => u.RecipientUsername == messageParams.Username && u.DateRead == null)
             };
 
