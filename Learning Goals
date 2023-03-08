@@ -155,3 +155,10 @@ Implement the "like user" functionality and gain and understanding of the follow
 
 1. Many to many relationships
 2. Configuring entities in the DbContext
+
+Section 15: Adding the messaging feature
+
+Implement the Messaging functionality and gain an understanding of the following: 
+
+1. More many to many to many relationships
+2. Using query params in Angular
