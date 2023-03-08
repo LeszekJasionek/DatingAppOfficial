@@ -142,8 +142,8 @@ Implement paging, sorting, filtering and gain an understanding of the following:
 
 1. How to implement pagination on the API & client
 2. Deffered Execution using IQueryable
-3. Hot to implement filtering on the aPI & client
-4. How to implement sorting on the aPI & client
+3. How to implement filtering on the API & client
+4. How to implement sorting on the API & client
 5. Using Action Filters
 6. Adding a TimeAge pipe
 7. Implement caching in the client for paginated resources
@@ -162,3 +162,4 @@ Implement the Messaging functionality and gain an understanding of the following
 
 1. More many to many to many relationships
 2. Using query params in Angular
+3. Using Route resolvers in Angular
