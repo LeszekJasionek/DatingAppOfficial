@@ -47,8 +47,7 @@
                 <p>{{member.interests}}</p>
             </tab>
             <tab heading="Messages">
-                <h4>Messages will go here</h4>
-                <p>{{member.interests}}</p>
+                <app-member-messages [username]="member.userName"></app-member-messages>
             </tab>
         </tabset>
     </div>
