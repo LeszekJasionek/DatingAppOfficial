@@ -2,6 +2,7 @@ Needed dependencies :
 
 EXTENSIONS : 
 
+microsoft.aspnetcore.identity.entityframeworkCore
 CloudinaryDotNet by Cloudinary
 
 npm install ngx-toastr --save ( github.com/scttcper/ngx-toastr)
