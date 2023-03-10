@@ -25,6 +25,7 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
 import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DatePickerComponent } from './_orms/date-picker/date-picker.component';
 import { MemberMessagesComponent } from './_members/member-messages/member-messages.component';
+import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MemberMessagesComponent } from './_members/member-messages/member-messa
     PhotoEditorComponent,
     TextInputComponent,
     DatePickerComponent,
-    MemberMessagesComponent
+    MemberMessagesComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,
