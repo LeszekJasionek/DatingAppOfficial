@@ -175,3 +175,11 @@ Refactor our code to use ASP.NET Identity and gain understaiding of the followin
 4. UserManager<T>
 5. SignInManager<T>
 6. RoleManager<T>
+
+Section 17: SignalR
+
+Implemtnt SignalR into applicationand understand how to:
+
+1. User and set up SignalR on both the API and the client
+2. Implement online presence
+3. Implement live chat between users
