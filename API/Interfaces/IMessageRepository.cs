@@ -1,6 +1,8 @@
+using System.Net.Http.Headers;
 using API.DTOs;
 using API.Entities;
 using API.Helpers;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace API.Interfaces
 {
@@ -16,5 +18,12 @@ namespace API.Interfaces
 
         Task<IEnumerable<MessageDto>> GetMessageThread(string  currentUserName, string recipientUserName);
         Task<bool> SaveAllAsync();
+
+        void AddGroup(Group group);
+        void RemoveConnection(Connection connection);
+        Task<Connection> Getconnection(string connectionId);
+        Task<Group> GetMessageGroup(string groupName);
+
+
     }
 }
