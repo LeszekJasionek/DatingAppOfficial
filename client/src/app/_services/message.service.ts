@@ -35,6 +35,9 @@ export class MessageService {
   }
 
   stopHubConnection() {
+    if(this.hubConnection) {
+      this.hubConnection.stop();
+    }
     this.hubConnection?.stop();
   }
 
