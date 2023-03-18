@@ -197,3 +197,25 @@ Implement the Unit of work pattern and gain an understanding of the following:
 Unit of Work :
 
 Maintains a list of objects affected by a business transaction and coordinates the writing of changes
+
+Section 19: Publishing 
+
+Actually publlish the app and gain an understanding of how to:
+
+1. Prepare the app for publication
+2. What a consider before publishing
+3. Switching Dbs
+4. Serving static content from the API server.
+5. Publishing to Heroku(Free!)
+6. Integreating Heroku to GitHub
+7. Using git branches
+
+What to consider when publishing 
+
+- Environment variables
+- Localhost
+- CORS - if hosting the client app in diffrent domain
+- Database
+- Cost
+- Capacity / scalability
+- Seed data
