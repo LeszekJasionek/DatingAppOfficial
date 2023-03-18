@@ -184,3 +184,16 @@ Implemtnt SignalR into applicationand understand how to:
 1. User and set up SignalR on both the API and the client
 2. Implement online presence
 3. Implement live chat between users
+
+Section 18: Unit of work pattern and finishing touches
+
+Implement the Unit of work pattern and gain an understanding of the following:
+
+1. The unit of work pattern
+2. Optimising queries to the DB
+3. Adding a confirm dialog service
+4. Finishing touches
+
+Unit of Work :
+
+Maintains a list of objects affected by a business transaction and coordinates the writing of changes
