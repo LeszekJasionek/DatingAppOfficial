@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { HubConnection } from '@microsoft/signalr';
-import { HubConnectionBuilder } from '@microsoft/signalr/dist/esm/HubConnectionBuilder';
+import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 import { ToastrService } from 'ngx-toastr';
 import { BehaviorSubject, take } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -16,10 +15,9 @@ export class PresenceService {
   private onlineUsersSource = new BehaviorSubject<string[]>([]);
   onlineUsers$ = this.onlineUsersSource.asObservable();
 
-  constructor(private toastr: ToastrService, private router : Router) { }
+  constructor(private toastr: ToastrService, private router: Router) { }
 
-
-  createHubConnection(user: User){
+  createHubConnection(user: User) {
     this.hubConnection = new HubConnectionBuilder()
       .withUrl(this.hubUrl + 'presence', {
         accessTokenFactory: () => user.token
@@ -32,8 +30,8 @@ export class PresenceService {
     this.hubConnection.on('UserIsOnline', username => {
       this.onlineUsers$.pipe(take(1)).subscribe({
         next: usernames => this.onlineUsersSource.next([...usernames, username])
-        })
-     })
+      })
+    })
 
     this.hubConnection.on('UserIsOffline', username => {
       this.onlineUsers$.pipe(take(1)).subscribe({
@@ -46,19 +44,16 @@ export class PresenceService {
     })
 
     this.hubConnection.on('NewMessageReceived', ({username, knownAs}) => {
-      this.toastr.info(knownAs + ' has sent you a new message! Click me to see it ')
+      this.toastr.info(knownAs + ' has sent you a new message! Click me to see it')
         .onTap
         .pipe(take(1))
         .subscribe({
-          next: () => this.router.navigateByUrl('/members/' + username + '?tab=Messages') 
+          next: () => this.router.navigateByUrl('/members/' + username + '?tab=Messages')
         })
     })
-
   }
 
-  stopHubConnection(){
-    this.hubConnection?.stop();
+  stopHubConnection() {
+    this.hubConnection?.stop().catch(error => console.log(error));
   }
-  
-
 }
