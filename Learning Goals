@@ -5,6 +5,15 @@ EXTENSIONS :
 microsoft.aspnetcore.identity.entityframeworkCore
 CloudinaryDotNet by Cloudinary
 
+PostGreSQL // postgresql.org
+Extensions VScode :  PostgreSQL v1.4.0 Chris Kolkman
+DOCKER docker.com
+
+wsl --install -d Ubuntu
+wsl --update
+
+docker run --name postgres -e POSTGRES_PASSWORD=postgrespw -p 5432:5432 -d postgres:latest   (terminal )
+
 npm install ngx-toastr --save ( github.com/scttcper/ngx-toastr)
 npm install @angular/animations
 npm install bootswatch
