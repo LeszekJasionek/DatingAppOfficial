@@ -49,8 +49,11 @@ namespace API.Controllers
         }
         [HttpGet("{username}")]
         public async Task<ActionResult<MemberDto>> GetUser(string username)
-        {        
-            return await _unitOfWork.UserRepository.GetMemberAsync(username);
+            {
+            var currentUsername = User.GetUsername();
+            return await _unitOfWork.UserRepository.GetMemberAsync(username,
+            isCurrentUser: currentUsername == username
+            );
         }
 
         [HttpPut]
@@ -72,9 +75,10 @@ namespace API.Controllers
         {
             var user = await _unitOfWork.UserRepository.GetUserByUsernameAsync(User.GetUsername());
 
-            if(user == null) return NotFound();
-
             var result = await _photoService.AddPhotoAsync(file);
+
+            if (result.Error != null) return BadRequest(result.Error.Message);
+
 
             if(result.Error != null) return BadRequest(result.Error.Message);
 
@@ -90,7 +94,7 @@ namespace API.Controllers
 
             if(await _unitOfWork.Complete())
             {
-                return CreatedAtAction(nameof(GetUser), 
+                return CreatedAtAction("GetUser",   // nameof(GetUser)
                     new {username = user.UserName}, _mapper.Map<PhotoDto>(photo));
             }
 
@@ -128,7 +132,7 @@ namespace API.Controllers
             var user = await _unitOfWork.UserRepository.GetUserByUsernameAsync(User.GetUsername());
             if(user == null) return NotFound();
 
-            var photo = user.Photos.FirstOrDefault(x => x.Id == photoId);
+            var photo = await _unitOfWork.PhotoRepository.GetPhotoById(photoId);
 
             if(photo == null) return NotFound();
 
