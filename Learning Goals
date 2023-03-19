@@ -6,8 +6,13 @@ microsoft.aspnetcore.identity.entityframeworkCore
 CloudinaryDotNet by Cloudinary
 
 PostGreSQL // postgresql.org
+Fly.io
 Extensions VScode :  PostgreSQL v1.4.0 Chris Kolkman
 DOCKER docker.com
+
+19.253 Extensions VScode : Docker
+19.253 docker build -t leszeknl/datingapp .
+19.253 docker run --rm -it -p 8080:80 leszeknl/datingapp:latest
 
 wsl --install -d Ubuntu
 wsl --update
