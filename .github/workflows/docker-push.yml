@@ -1,10 +1,10 @@
 name: docker-push
 
 on:
-  workflow_dispatch:
-    # push:
-    #   branches:
-    #     - 'main'
+  # workflow_dispatch:
+    push:
+      branches:
+        - 'LeszekJasionek-Deploying-1'
 
 env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
@@ -29,9 +29,9 @@ jobs:
 
   deploy:
     needs: docker
-    name: Deploy app
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
+      - name: Deploy app
+        run: flyctl deploy --remote-only
