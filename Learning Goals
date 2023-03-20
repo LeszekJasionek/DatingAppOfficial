@@ -6,8 +6,30 @@ microsoft.aspnetcore.identity.entityframeworkCore
 CloudinaryDotNet by Cloudinary
 
 PostGreSQL // postgresql.org
+Fly.io
 Extensions VScode :  PostgreSQL v1.4.0 Chris Kolkman
 DOCKER docker.com
+
+19.253 Extensions VScode : Docker
+19.253 docker build -t leszeknl/datingapp .
+19.253 docker run --rm -it -p 8080:80 leszeknl/datingapp:latest
+
+19.254 docker push leszeknl/datingapp:latest
+optional : docker login
+
+19.255 powershell : iwr https://fly.io/install.ps1 -useb | iex
+19.255 flyctl auth signup
+19.255 flyctl auth signup
+19.255 fly launch --image leszeknl/datingapp:latest
+19.255 flyctl deploy
+19.255 flyctl secrets list
+19.255 flyctl secrets set CloudinarySetting__ApiSecret=....
+19.255 https://delinea.com/resources/password-generator-it-tool
+19.255 flyctl secrets set TokenKey=xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+19.256 docker build -t leszeknl/datingapp .
+19.256 docker push leszeknl/datingapp:latest
+19.256 flyctl deploy
 
 wsl --install -d Ubuntu
 wsl --update
