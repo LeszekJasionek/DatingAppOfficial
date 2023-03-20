@@ -1,6 +1,9 @@
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
 WORKDIR /app
+<<<<<<< DeployingWorks
+=======
 
+>>>>>>> master
 EXPOSE 8080
 
 # copy csproj and restore as distinct layers
