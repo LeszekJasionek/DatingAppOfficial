@@ -26,3 +26,4 @@ jobs:
         context: "{{defaultContext}}:API"
           push: true
           tags: leszeknl/datingapp:latest
+          
