@@ -14,6 +14,9 @@ DOCKER docker.com
 19.253 docker build -t leszeknl/datingapp .
 19.253 docker run --rm -it -p 8080:80 leszeknl/datingapp:latest
 
+19.254 docker push leszeknl/datingapp:latest
+optional : docker login
+
 wsl --install -d Ubuntu
 wsl --update
 
