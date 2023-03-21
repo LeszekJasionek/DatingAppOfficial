@@ -31,6 +31,11 @@ optional : docker login
 19.256 docker push leszeknl/datingapp:latest
 19.256 flyctl deploy
 
+19.257  flyctl proxy 6543:5432 -a datingappbylj-db
+19.257  flyctl logs -a datingappbylj
+19.257 
+19.257 
+
 wsl --install -d Ubuntu
 wsl --update
 

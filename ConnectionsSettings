@@ -24,3 +24,4 @@ Postgres cluster datingappbylj-db is now attached to datingappbylj
 The following secret was added to datingappbylj:
   DATABASE_URL=postgres://datingappbylj:UCvTKTrU6HflcJ9@datingappbylj-db.flycast:5432/datingappbylj?sslmode=disable
 Postgres cluster datingappbylj-db is now attached to datingappbylj
+
