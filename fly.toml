@@ -1,4 +1,4 @@
-# fly.toml file generated for datingappbylj on 2023-03-20T12:52:34+01:00
+# fly.toml file generated for datingappbylj on 2023-03-22T19:35:13+01:00
 
 app = "datingappbylj"
 kill_signal = "SIGINT"
@@ -10,9 +10,9 @@ processes = []
   image = "leszeknl/datingapp:latest"
 
 [env]
-ASPNETCORE_URLS="http://+:8080"
-CloudinarySettings__CloudName="dtwoosixy"
-CloudinarySettings__ApiKey="467193157335752"
+  ASPNETCORE_URLS = "http://+:8080"
+  CloudinarySettings__ApiKey = "467193157335752"
+  CloudinarySettings__CloudName = "dtwoosixy"
 
 [experimental]
   auto_rollback = true
