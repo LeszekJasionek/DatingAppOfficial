@@ -27,7 +27,7 @@ jobs:
           context: "{{defaultContext}}:API"
           push: true
           tags: leszeknl/datingapp:latest
-
+          
   deploy:
     needs: docker
     name: Deploy app
